@@ -1,16 +1,9 @@
 package com.phani.tddsample.data.repository
 
-import com.phani.tddsample.data.remote.api.UserApiService
 import com.phani.tddsample.data.remote.dto.AddressDto
 import com.phani.tddsample.data.remote.dto.CompanyDto
 import com.phani.tddsample.data.remote.dto.UserDto
-import com.phani.tddsample.domain.repository.UserRepository
-import io.mockk.coEvery
-import io.mockk.coVerify
-import io.mockk.mockk
 import kotlinx.coroutines.test.runTest
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
@@ -27,14 +20,10 @@ class UserRepositoryImplTest {
 
     // TODO: Declare dependencies
     // HINT: UserApiService (mock) and UserRepositoryImpl (SUT)
-    private lateinit var userApiService: UserApiService
-    private lateinit var userRepository: UserRepositoryImpl
 
     @BeforeEach
     fun setup() {
         // TODO: Initialize mocks and repository
-        userApiService = mockk()
-        userRepository = UserRepositoryImpl(userApiService)
     }
 
     @Test
